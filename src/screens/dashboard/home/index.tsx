@@ -1,15 +1,15 @@
 import React from 'react';
-import { Box, Button } from 'design-system';
+import { Box, Text } from 'design-system';
 import { Screen } from 'shared';
 
-const Onboarding = () => {
+const Home = () => {
   return (
     <Screen removeSafeaArea>
       <Box>
-        <Button />
+        <Text>Home</Text>
       </Box>
     </Screen>
   );
 };
 
-export default Onboarding;
+export default Home;

@@ -3,87 +3,87 @@ import { font } from './font';
 
 export const typography = {
   tiny: {
-    fontFamily: font.MulishRegular,
+    fontFamily: font.SFProRoundedRegular,
     fontSize: hp(10),
   },
   tinyMedium: {
-    fontFamily: font.DarkerGrotesqueSemiBold,
+    fontFamily: font.SFProRoundedSemibold,
     fontSize: hp(10),
   },
   tinyBold: {
-    fontFamily: font.MulishBold,
+    fontFamily: font.SFProRoundedBold,
     fontSize: hp(10),
   },
   bodySmall: {
-    fontFamily: font.MulishRegular,
+    fontFamily: font.SFProRoundedRegular,
     fontSize: hp(12),
   },
   small: {
-    fontFamily: font.MulishRegular,
+    fontFamily: font.SFProRoundedRegular,
     fontSize: hp(10),
   },
   smallBold: {
-    fontFamily: font.MulishBold,
+    fontFamily: font.SFProRoundedBold,
     fontSize: hp(12),
   },
   body: {
-    fontFamily: font.MulishRegular,
+    fontFamily: font.SFProRoundedRegular,
     fontSize: hp(14),
   },
   bodyMedium: {
-    fontFamily: font.MulishMedium,
+    fontFamily: font.SFProRoundedMedium,
     fontSize: hp(14),
   },
   bodyBold: {
-    fontFamily: font.MulishBold,
+    fontFamily: font.SFProRoundedBold,
     fontSize: hp(14),
   },
   headerBold: {
-    fontFamily: font.DarkerGrotesqueBold,
+    fontFamily: font.SFProRoundedBold,
     fontSize: hp(16),
   },
   header: {
-    fontFamily: font.DarkerGrotesqueRegular,
+    fontFamily: font.SFProRoundedRegular,
     fontSize: hp(16),
   },
   headerMedium: {
-    fontFamily: font.DarkerGrotesqueMedium,
+    fontFamily: font.SFProRoundedMedium,
     fontSize: hp(16),
   },
   headerBig: {
-    fontFamily: font.DarkerGrotesqueSemiBold,
+    fontFamily: font.SFProRoundedSemibold,
     fontSize: hp(18),
   },
   heading: {
-    fontFamily: font.DarkerGrotesqueBold,
+    fontFamily: font.SFProRoundedBold,
     fontSize: hp(20),
   },
   h1: {
-    fontFamily: font.DarkerGrotesqueExtraBold,
+    fontFamily: font.SFProRoundedBold,
     fontSize: hp(32),
   },
   h2: {
-    fontFamily: font.DarkerGrotesqueSemiBold,
+    fontFamily: font.SFProRoundedSemibold,
     fontSize: hp(28),
   },
   h3: {
-    fontFamily: font.DarkerGrotesqueSemiBold,
+    fontFamily: font.SFProRoundedSemibold,
     fontSize: hp(22),
   },
   h4: {
-    fontFamily: font.DarkerGrotesqueSemiBold,
+    fontFamily: font.SFProRoundedSemibold,
     fontSize: hp(17),
   },
   bottomTabRegular: {
-    fontFamily: font.ManropeRegular,
+    fontFamily: font.SFProRoundedRegular,
     fontSize: hp(11),
   },
   bottomTabMedium: {
-    fontFamily: font.ManropeSemiBold,
+    fontFamily: font.SFProRoundedSemibold,
     fontSize: hp(11),
   },
   h4UpperCase: {
-    fontFamily: font.MulishMedium,
+    fontFamily: font.SFProRoundedMedium,
     fontSize: hp(17),
     textTransform: 'uppercase',
   },
