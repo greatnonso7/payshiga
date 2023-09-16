@@ -9,9 +9,9 @@ import {
 import Modal from 'react-native-modal';
 import { styles } from './style';
 import { BaseModalProps } from './types';
-import { hp } from 'utils';
-import theme from 'theme';
 import { Box, Text } from 'design-system';
+import { Icon } from 'shared/Icon';
+import theme from 'theme';
 
 export const BaseModal = ({
   visible,
@@ -19,7 +19,7 @@ export const BaseModal = ({
   onClose,
   containerStyles,
   removeBackTap,
-  hasCloseButton,
+  headerText,
 }: BaseModalProps) => {
   return (
     <Modal
@@ -33,8 +33,7 @@ export const BaseModal = ({
       style={[styles.container, containerStyles]}
       propagateSwipe={true}
       backdropOpacity={0.8}
-      // eslint-disable-next-line prettier/prettier
-      onBackdropPress={removeBackTap ? () => { } : onClose}>
+      onBackdropPress={removeBackTap ? () => {} : onClose}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : undefined}
@@ -43,19 +42,18 @@ export const BaseModal = ({
           pointerEvents="box-none">
           <Box style={[styles.dialogContainer]}>
             <Box style={styles.barModalContainer} />
-            {hasCloseButton && (
-              <TouchableOpacity
-                onPress={onClose}
-                activeOpacity={0.8}
-                style={styles.closeButtonContainer}>
-                <Text
-                  fontSize={hp(14)}
-                  color={theme.colors.PRIMARY}
-                  fontWeight="medium">
-                  Close
-                </Text>
-              </TouchableOpacity>
-            )}
+            <Box style={styles.closeButtonContainer}>
+              <Text
+                variant="headerMedium"
+                fontSize={22}
+                fontFamily={theme.font.SFProRoundedSemibold}
+                color={theme.colors.WHITE}>
+                {headerText}
+              </Text>
+              <Box onPress={onClose} as={TouchableOpacity} activeOpacity={0.8}>
+                <Icon name="close" />
+              </Box>
+            </Box>
             {children}
           </Box>
         </KeyboardAvoidingView>

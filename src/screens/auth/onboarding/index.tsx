@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Button } from 'design-system';
 import { Screen } from 'shared';
 import theme from 'theme';
 import { wp } from 'utils';
+import { ImportantNotice } from './modals';
 
 const Onboarding = () => {
+  const [open, setOpen] = useState<'notice' | ''>('');
   return (
     <Screen removeSafeaArea backgroundColor={theme.colors.BLACK}>
       <Box position={'absolute'} alignSelf={'center'} bottom={100}>
@@ -24,11 +26,17 @@ const Onboarding = () => {
           width={wp(247)}
           alignSelf={'center'}
           isNotBottom
+          onPress={() => setOpen('notice')}
           borderRadius={100}
           textColor={theme.colors.BLACK}
           title="Create an account"
         />
       </Box>
+
+      <ImportantNotice
+        isVisible={open === 'notice'}
+        onClose={() => setOpen('')}
+      />
     </Screen>
   );
 };

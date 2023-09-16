@@ -6,5 +6,5 @@ export interface BaseModalProps {
   onClose: () => void;
   containerStyles?: ViewStyle;
   removeBackTap?: boolean;
-  hasCloseButton?: boolean;
+  headerText?: string;
 }

@@ -12,12 +12,12 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		716797C0D6CF45D3A8B891AB /* SFProRounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF1BC4CF83C640098F66073A /* SFProRounded-Regular.otf */; };
 		7699B88040F8A987B510C191 /* libPods-payshiga-payshigaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-payshiga-payshigaTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		945230E6E9DD4DEE925A2CFD /* SFProRounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBC1B30133BC4CF2AD8B6265 /* SFProRounded-Bold.otf */; };
-		B6D52F4135084FDA8377CD4A /* SFProRounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0E7D5FBCF4234739B25CBB59 /* SFProRounded-Medium.otf */; };
-		716797C0D6CF45D3A8B891AB /* SFProRounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF1BC4CF83C640098F66073A /* SFProRounded-Regular.otf */; };
 		A2A14FC6D4144DC5B9D17BAB /* SFProRounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 600E56E5AC1746998471CF17 /* SFProRounded-Semibold.otf */; };
+		B6D52F4135084FDA8377CD4A /* SFProRounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0E7D5FBCF4234739B25CBB59 /* SFProRounded-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 		00E356EE1AD99517003FC87E /* payshigaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = payshigaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* payshigaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = payshigaTests.m; sourceTree = "<group>"; };
+		0E7D5FBCF4234739B25CBB59 /* SFProRounded-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProRounded-Medium.otf"; path = "../src/assets/fonts/SFProRounded-Medium.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* payshiga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = payshiga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = payshiga/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = payshiga/AppDelegate.mm; sourceTree = "<group>"; };
@@ -45,13 +46,12 @@
 		5709B34CF0A7D63546082F79 /* Pods-payshiga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payshiga.release.xcconfig"; path = "Target Support Files/Pods-payshiga/Pods-payshiga.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-payshiga-payshigaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payshiga-payshigaTests.debug.xcconfig"; path = "Target Support Files/Pods-payshiga-payshigaTests/Pods-payshiga-payshigaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-payshiga.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-payshiga.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		600E56E5AC1746998471CF17 /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProRounded-Semibold.otf"; path = "../src/assets/fonts/SFProRounded-Semibold.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = payshiga/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-payshiga-payshigaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-payshiga-payshigaTests.release.xcconfig"; path = "Target Support Files/Pods-payshiga-payshigaTests/Pods-payshiga-payshigaTests.release.xcconfig"; sourceTree = "<group>"; };
+		CBC1B30133BC4CF2AD8B6265 /* SFProRounded-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProRounded-Bold.otf"; path = "../src/assets/fonts/SFProRounded-Bold.otf"; sourceTree = "<group>"; };
+		DF1BC4CF83C640098F66073A /* SFProRounded-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProRounded-Regular.otf"; path = "../src/assets/fonts/SFProRounded-Regular.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		CBC1B30133BC4CF2AD8B6265 /* SFProRounded-Bold.otf */ = {isa = PBXFileReference; name = "SFProRounded-Bold.otf"; path = "../src/assets/fonts/SFProRounded-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0E7D5FBCF4234739B25CBB59 /* SFProRounded-Medium.otf */ = {isa = PBXFileReference; name = "SFProRounded-Medium.otf"; path = "../src/assets/fonts/SFProRounded-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DF1BC4CF83C640098F66073A /* SFProRounded-Regular.otf */ = {isa = PBXFileReference; name = "SFProRounded-Regular.otf"; path = "../src/assets/fonts/SFProRounded-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		600E56E5AC1746998471CF17 /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; name = "SFProRounded-Semibold.otf"; path = "../src/assets/fonts/SFProRounded-Semibold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +114,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		37776E2116ED4889867F255C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CBC1B30133BC4CF2AD8B6265 /* SFProRounded-Bold.otf */,
+				0E7D5FBCF4234739B25CBB59 /* SFProRounded-Medium.otf */,
+				DF1BC4CF83C640098F66073A /* SFProRounded-Regular.otf */,
+				600E56E5AC1746998471CF17 /* SFProRounded-Semibold.otf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,18 +168,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		37776E2116ED4889867F255C /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				CBC1B30133BC4CF2AD8B6265 /* SFProRounded-Bold.otf */,
-				0E7D5FBCF4234739B25CBB59 /* SFProRounded-Medium.otf */,
-				DF1BC4CF83C640098F66073A /* SFProRounded-Regular.otf */,
-				600E56E5AC1746998471CF17 /* SFProRounded-Semibold.otf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

@@ -9,3 +9,4 @@ export * from './Loader';
 export * from './PinModal';
 export * from './HeaderText';
 // export * from './BankModal';
+export * from './GradientText';
