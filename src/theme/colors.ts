@@ -6,4 +6,5 @@ export const colors = {
   PLACEHOLDER_BLACK: '#454647',
   PRIMARY_BLUE_100: '#6771FF',
   APP_BLACK: '#181819',
+  BLACK: '#000000',
 };

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Text } from 'design-system';
-import { useSelector } from 'react-redux';
 import FuzzySearch from 'fuzzy-search';
 
-import { RootState } from 'redux/store';
 import {
   FlatList,
   Image,

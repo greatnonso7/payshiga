@@ -1,6 +1,6 @@
 export const font = {
-  SFProRoundedBold: 'SF-Pro-Rounded-Bold',
-  SFProRoundedMedium: 'SF-Pro-Rounded-Medium',
-  SFProRoundedRegular: 'SF-Pro-Rounded-Regular',
-  SFProRoundedSemibold: 'SF-Pro-Rounded-Semibold',
+  SFProRoundedBold: 'SFProRounded-Bold',
+  SFProRoundedMedium: 'SFProRounded-Medium',
+  SFProRoundedRegular: 'SFProRounded-Regular',
+  SFProRoundedSemibold: 'SFProRounded-Semibold',
 };

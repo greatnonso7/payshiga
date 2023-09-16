@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react';
-import Navigation from './navigation';
+import Navigation from 'navigation';
 import React, { useEffect } from 'react';
 import SplashScreen from 'react-native-splash-screen';
 import theme from 'theme';
