@@ -5,7 +5,7 @@ import Home from 'screens/dashboard/home';
 import Profile from 'screens/dashboard/profile';
 import Search from 'screens/dashboard/search';
 import theme from 'theme';
-import { hp, isIos, wp } from 'utils';
+import { hp } from 'utils';
 import { StyleSheet } from 'react-native';
 import { Icon } from 'shared';
 import { Box } from 'design-system';
@@ -36,12 +36,13 @@ const BottomTabBar = () => {
         unmountOnBlur: true,
         tabBarStyle: {
           height: 80,
-          backgroundColor: theme.colors.APP_BLACK,
+          backgroundColor: theme.colors.MAIN_BLACK,
+          borderColor: theme.colors.MAIN_BLACK,
         },
-        tabBarActiveTintColor: theme.colors.WHITE,
+        tabBarActiveTintColor: theme.colors.MAIN_BLACK,
         tabBarLabelStyle: {
           fontSize: hp(10),
-          fontFamily: theme.font.SFProRoundedRegular,
+          fontFamily: theme.font.ShigaSansRegular,
         },
         tabBarShowLabel: false,
       }}>
@@ -101,35 +102,10 @@ const BottomTabBar = () => {
 };
 
 const styles = StyleSheet.create({
-  bottomTabContainer: {
-    alignItems: 'center',
-    backgroundColor: theme.colors.WHITE,
-    borderTopColor: theme.colors.ACCENT_GREY_100,
-    borderTopWidth: 0.5,
-    flexDirection: 'row',
-    paddingHorizontal: wp(50),
-    height: hp(84),
-    justifyContent: 'space-between',
-  },
-  bottomTabButton: {
-    width: 24,
-    height: 24,
-    borderRadius: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: hp(1),
-  },
-  receiveButtonContainer: {
-    alignItems: 'center',
-    top: isIos ? 10 : 0,
-  },
   tabContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    top: isIos ? 10 : 0,
-  },
-  receiveText: {
-    textAlign: 'center',
+    // top: isIos ? 10 : 0,
   },
 });
 

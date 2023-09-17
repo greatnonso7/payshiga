@@ -3,87 +3,87 @@ import { font } from './font';
 
 export const typography = {
   tiny: {
-    fontFamily: font.SFProRoundedRegular,
+    fontFamily: font.ShigaSansRegular,
     fontSize: hp(10),
   },
   tinyMedium: {
-    fontFamily: font.SFProRoundedSemibold,
+    fontFamily: font.ShigaSansMedium,
     fontSize: hp(10),
   },
   tinyBold: {
-    fontFamily: font.SFProRoundedBold,
+    fontFamily: font.ShigaSansBold,
     fontSize: hp(10),
   },
   bodySmall: {
-    fontFamily: font.SFProRoundedRegular,
+    fontFamily: font.ShigaSansRegular,
     fontSize: hp(12),
   },
   small: {
-    fontFamily: font.SFProRoundedRegular,
+    fontFamily: font.ShigaSansRegular,
     fontSize: hp(10),
   },
   smallBold: {
-    fontFamily: font.SFProRoundedBold,
+    fontFamily: font.ShigaSansBold,
     fontSize: hp(12),
   },
   body: {
-    fontFamily: font.SFProRoundedRegular,
+    fontFamily: font.ShigaSansRegular,
     fontSize: hp(14),
   },
   bodyMedium: {
-    fontFamily: font.SFProRoundedMedium,
+    fontFamily: font.ShigaSansMedium,
     fontSize: hp(14),
   },
   bodyBold: {
-    fontFamily: font.SFProRoundedBold,
+    fontFamily: font.ShigaSansBold,
     fontSize: hp(14),
   },
   headerBold: {
-    fontFamily: font.SFProRoundedBold,
+    fontFamily: font.ShigaSansBold,
     fontSize: hp(16),
   },
   header: {
-    fontFamily: font.SFProRoundedRegular,
+    fontFamily: font.ShigaSansRegular,
     fontSize: hp(16),
   },
   headerMedium: {
-    fontFamily: font.SFProRoundedMedium,
+    fontFamily: font.ShigaSansMedium,
     fontSize: hp(16),
   },
   headerBig: {
-    fontFamily: font.SFProRoundedSemibold,
+    fontFamily: font.ShigaSansMedium,
     fontSize: hp(18),
   },
   heading: {
-    fontFamily: font.SFProRoundedBold,
+    fontFamily: font.ShigaSansBold,
     fontSize: hp(20),
   },
   h1: {
-    fontFamily: font.SFProRoundedBold,
+    fontFamily: font.ShigaSansBold,
     fontSize: hp(32),
   },
   h2: {
-    fontFamily: font.SFProRoundedSemibold,
+    fontFamily: font.ShigaSansMedium,
     fontSize: hp(28),
   },
   h3: {
-    fontFamily: font.SFProRoundedSemibold,
+    fontFamily: font.ShigaSansMedium,
     fontSize: hp(22),
   },
   h4: {
-    fontFamily: font.SFProRoundedSemibold,
+    fontFamily: font.ShigaSansMedium,
     fontSize: hp(17),
   },
   bottomTabRegular: {
-    fontFamily: font.SFProRoundedRegular,
+    fontFamily: font.ShigaSansRegular,
     fontSize: hp(11),
   },
   bottomTabMedium: {
-    fontFamily: font.SFProRoundedSemibold,
+    fontFamily: font.ShigaSansMedium,
     fontSize: hp(11),
   },
   h4UpperCase: {
-    fontFamily: font.SFProRoundedMedium,
+    fontFamily: font.ShigaSansMedium,
     fontSize: hp(17),
     textTransform: 'uppercase',
   },

@@ -2,20 +2,20 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/assets/fonts/SFProRounded-Bold.otf",
-      "sha1": "745fb5fc263ee7e4d86211f1680bd928c327040a"
+      "path": "src/assets/fonts/ShigaDisplayDisplay.otf",
+      "sha1": "cb58c1c5a632e47ebf00f7b9892fc6b3832084fd"
     },
     {
-      "path": "src/assets/fonts/SFProRounded-Medium.otf",
-      "sha1": "889faa176363f8b8e629aeaacdf85c07d1312d8d"
+      "path": "src/assets/fonts/ShigaSansBold.otf",
+      "sha1": "a4967a66dc4ef8cd8a8e81f4dd94c06a40097664"
     },
     {
-      "path": "src/assets/fonts/SFProRounded-Regular.otf",
-      "sha1": "ab2491a7db1d0a1792e50aefd4eea4bc46215742"
+      "path": "src/assets/fonts/ShigaSansMedium.otf",
+      "sha1": "163bdb1b44ce57c74d7337fc0ade1f102a2a03e6"
     },
     {
-      "path": "src/assets/fonts/SFProRounded-Semibold.otf",
-      "sha1": "00fd8c58ca31cc2794b221405884a1601f50558f"
+      "path": "src/assets/fonts/ShigaSansRegular.otf",
+      "sha1": "dc6a05904b46e327a9a8409d0aa99bbac48f3786"
     }
   ]
 }

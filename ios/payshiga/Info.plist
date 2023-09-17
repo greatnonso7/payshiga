@@ -53,10 +53,10 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>SFProRounded-Bold.otf</string>
-		<string>SFProRounded-Medium.otf</string>
-		<string>SFProRounded-Regular.otf</string>
-		<string>SFProRounded-Semibold.otf</string>
+		<string>ShigaDisplayDisplay.otf</string>
+		<string>ShigaSansBold.otf</string>
+		<string>ShigaSansMedium.otf</string>
+		<string>ShigaSansRegular.otf</string>
 	</array>
 </dict>
 </plist>
