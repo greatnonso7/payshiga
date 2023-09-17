@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   inputSearchBar: {
     marginLeft: wp(8),
     fontSize: hp(16),
-    fontFamily: theme.font.SFProRoundedMedium,
+    fontFamily: theme.font.ShigaSansMedium,
     top: isAndroid ? 3 : 0,
     color: theme.colors.WHITE,
   },

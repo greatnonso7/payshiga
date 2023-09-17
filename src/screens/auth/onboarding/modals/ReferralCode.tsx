@@ -72,7 +72,7 @@ export const ReferralCode = ({
 
 const styles = StyleSheet.create({
   codeInputStyle: {
-    fontFamily: theme.font.SFProRoundedMedium,
+    fontFamily: theme.font.ShigaSansMedium,
     fontSize: 20,
     color: theme.colors.WHITE,
   },

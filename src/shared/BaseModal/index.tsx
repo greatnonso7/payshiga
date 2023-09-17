@@ -48,7 +48,7 @@ export const BaseModal = ({
                 <Text
                   variant="headerMedium"
                   fontSize={22}
-                  fontFamily={theme.font.SFProRoundedSemibold}
+                  fontFamily={theme.font.ShigaSansMedium}
                   color={theme.colors.WHITE}>
                   {headerText}
                 </Text>

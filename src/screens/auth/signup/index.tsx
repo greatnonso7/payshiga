@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   phoneInputStyle: {
     marginLeft: 10,
     fontSize: hp(20),
-    fontFamily: theme.font.SFProRoundedMedium,
+    fontFamily: theme.font.ShigaSansMedium,
     width: 200,
     top: isAndroid ? 6 : 0,
     color: theme.colors.WHITE,

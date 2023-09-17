@@ -58,7 +58,7 @@ export const RegularInput = ({
         {isUsername && (
           <Text
             variant="bodyMedium"
-            fontFamily={theme.font.SFProRoundedBold}
+            fontFamily={theme.font.ShigaSansBold}
             color={theme.colors.PLACEHOLDER_BLACK}
             fontSize={20}>
             @

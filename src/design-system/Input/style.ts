@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   textInput: {
-    fontFamily: theme.font.SFProRoundedMedium,
+    fontFamily: theme.font.ShigaSansMedium,
     fontSize: hp(20),
     height: 40,
     width: 300,
