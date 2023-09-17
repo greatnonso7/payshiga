@@ -5,7 +5,6 @@ import theme from 'theme';
 import { FlatList, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { customizeProfile } from 'data';
 import { AuthStackParamList } from 'types';
-import { StackScreenProps } from '@react-navigation/stack';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import { capitalizeFirstLetter } from 'utils';
 import {
@@ -13,10 +12,9 @@ import {
   ImageLibraryOptions,
   launchImageLibrary,
 } from 'react-native-image-picker';
+import { navigationRef } from 'navigation/utils';
 
-type Props = StackScreenProps<AuthStackParamList, 'SetDisplay'>;
-
-const SetDisplay = ({ navigation: { navigate } }: Props) => {
+const SetDisplay = () => {
   const [imageType, setImageType] = useState<'color' | 'image' | ''>('');
   const [image, setImage] = useState('');
   const [file, setFile] = useState<Asset>();
@@ -123,7 +121,12 @@ const SetDisplay = ({ navigation: { navigate } }: Props) => {
         />
       </Box>
 
-      <Button title="Continue" />
+      <Button
+        title="Continue"
+        disabled={image || file ? false : true}
+        //@ts-ignore
+        onPress={() => navigationRef.navigate('AppDashboard')}
+      />
     </Screen>
   );
 };

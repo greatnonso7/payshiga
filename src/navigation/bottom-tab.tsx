@@ -8,7 +8,7 @@ import theme from 'theme';
 import { hp, isIos, wp } from 'utils';
 import { StyleSheet } from 'react-native';
 import { Icon } from 'shared';
-import { Box, Text } from 'design-system';
+import { Box } from 'design-system';
 import { BottomTabStackParamList } from 'types';
 import Transactions from 'screens/dashboard/transactions';
 
@@ -20,14 +20,11 @@ interface BottomTabProps {
 }
 
 const BottomTabBar = () => {
-  const BottomTab = ({ name, focused }: BottomTabProps) => {
+  const BottomTab = ({ name }: BottomTabProps) => {
     const icon = name?.toLowerCase();
     return (
       <Box key={name} style={styles.tabContainer}>
-        <Icon name={focused ? `${icon}-active` : icon} />
-        <Text variant={focused ? 'bottomTabMedium' : 'bottomTabRegular'}>
-          {name}
-        </Text>
+        <Icon name={icon} />
       </Box>
     );
   };
@@ -39,7 +36,7 @@ const BottomTabBar = () => {
         unmountOnBlur: true,
         tabBarStyle: {
           height: 80,
-          backgroundColor: theme.colors.WHITE,
+          backgroundColor: theme.colors.APP_BLACK,
         },
         tabBarActiveTintColor: theme.colors.WHITE,
         tabBarLabelStyle: {
@@ -55,6 +52,27 @@ const BottomTabBar = () => {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <BottomTab name="Home" focused={focused} />
+          ),
+        }}
+      />
+
+      <DashboardBottomTabs.Screen
+        name="Transactions"
+        component={Transactions}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <BottomTab name="Transactions" focused={focused} />
+          ),
+        }}
+      />
+      <DashboardBottomTabs.Screen
+        name="Search"
+        component={Search}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <BottomTab name="Search" focused={focused} />
           ),
         }}
       />
@@ -75,26 +93,6 @@ const BottomTabBar = () => {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <BottomTab name="Profile" focused={focused} />
-          ),
-        }}
-      />
-      <DashboardBottomTabs.Screen
-        name="Search"
-        component={Search}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <BottomTab name="Search" focused={focused} />
-          ),
-        }}
-      />
-      <DashboardBottomTabs.Screen
-        name="Transactions"
-        component={Transactions}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <BottomTab name="Transactions" focused={focused} />
           ),
         }}
       />

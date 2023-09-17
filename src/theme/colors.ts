@@ -7,6 +7,7 @@ export const colors = {
   PRIMARY_BLUE_100: '#6771FF',
   APP_BLACK: '#181819',
   BLACK: '#000000',
+  MAIN_BLACK: '#0f0f0f',
   TXNBTN_BLACK: '#1F2021',
   TXNBG_BLACK: '#131415',
   ALT_BLACK: '#171819',
