@@ -19,6 +19,7 @@ export const BaseModal = ({
   onClose,
   containerStyles,
   removeBackTap,
+  showHeader,
   headerText,
 }: BaseModalProps) => {
   return (
@@ -42,18 +43,23 @@ export const BaseModal = ({
           pointerEvents="box-none">
           <Box style={[styles.dialogContainer]}>
             <Box style={styles.barModalContainer} />
-            <Box style={styles.closeButtonContainer}>
-              <Text
-                variant="headerMedium"
-                fontSize={22}
-                fontFamily={theme.font.SFProRoundedSemibold}
-                color={theme.colors.WHITE}>
-                {headerText}
-              </Text>
-              <Box onPress={onClose} as={TouchableOpacity} activeOpacity={0.8}>
-                <Icon name="close" />
+            {showHeader ? (
+              <Box style={styles.closeButtonContainer}>
+                <Text
+                  variant="headerMedium"
+                  fontSize={22}
+                  fontFamily={theme.font.SFProRoundedSemibold}
+                  color={theme.colors.WHITE}>
+                  {headerText}
+                </Text>
+                <Box
+                  onPress={onClose}
+                  as={TouchableOpacity}
+                  activeOpacity={0.8}>
+                  <Icon name="close" />
+                </Box>
               </Box>
-            </Box>
+            ) : null}
             {children}
           </Box>
         </KeyboardAvoidingView>

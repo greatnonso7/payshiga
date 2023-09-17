@@ -7,15 +7,18 @@ import { wp } from 'utils';
 interface ImportantNoticeProps {
   isVisible: boolean;
   onClose: () => void;
+  onComplete: () => void;
 }
 
 export const ImportantNotice = ({
   isVisible,
   onClose,
+  onComplete,
 }: ImportantNoticeProps) => {
   return (
     <BaseModal
       visible={isVisible}
+      showHeader
       onClose={onClose}
       headerText="Important Notice">
       <Box paddingBottom={40} paddingTop={30}>
@@ -29,6 +32,7 @@ export const ImportantNotice = ({
           title="I Understand"
           backgroundColor={theme.colors.YELLOW}
           alignSelf={'center'}
+          onPress={onComplete}
         />
       </Box>
     </BaseModal>

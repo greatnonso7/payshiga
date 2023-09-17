@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/stack';
 import Onboarding from 'screens/auth/onboarding';
 import { AuthStackParamList } from 'types';
+import Signup from 'screens/auth/signup';
 
 const AuthStack = createStackNavigator<AuthStackParamList>();
 
@@ -17,6 +18,7 @@ const AuthNavigation = () => {
         ...TransitionPresets.SlideFromRightIOS,
       }}>
       <AuthStack.Screen name="Onboarding" component={Onboarding} />
+      <AuthStack.Screen name="Signup" component={Signup} />
     </AuthStack.Navigator>
   );
 };

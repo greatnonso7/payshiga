@@ -7,4 +7,5 @@ export interface BaseModalProps {
   containerStyles?: ViewStyle;
   removeBackTap?: boolean;
   headerText?: string;
+  showHeader?: boolean;
 }

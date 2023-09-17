@@ -22,13 +22,13 @@ export const Header = ({
           as={TouchableOpacity}
           activeOpacity={0.8}
           position={'absolute'}
-          left={0}
+          left={10}
           onPress={() =>
             onPressLeftIcon ? onPressLeftIcon() : navigation.goBack()
           }
           hitSlop={populateHitSlop(5)}>
           <Box>
-            <Icon name="back-arrow" />
+            <Icon name="back-icon" />
           </Box>
         </Box>
       );

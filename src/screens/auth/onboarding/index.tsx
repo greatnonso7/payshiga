@@ -3,10 +3,28 @@ import { Box, Button } from 'design-system';
 import { Screen } from 'shared';
 import theme from 'theme';
 import { wp } from 'utils';
-import { ImportantNotice } from './modals';
+import { ImportantNotice, ReferralCode } from './modals';
+import { StackScreenProps } from '@react-navigation/stack';
+import { AuthStackParamList } from 'types';
 
-const Onboarding = () => {
-  const [open, setOpen] = useState<'notice' | ''>('');
+type Props = StackScreenProps<AuthStackParamList, 'Onboarding'>;
+
+const Onboarding = ({ navigation: { navigate } }: Props) => {
+  const [open, setOpen] = useState<'notice' | 'referral' | ''>('');
+
+  const onCompleteNotice = async () => {
+    setOpen('');
+    setTimeout(() => {
+      setOpen('referral');
+    }, 1000);
+  };
+
+  const onCompleteReferral = async () => {
+    setOpen('');
+    setTimeout(() => {
+      navigate('Signup');
+    }, 1000);
+  };
   return (
     <Screen removeSafeaArea backgroundColor={theme.colors.BLACK}>
       <Box position={'absolute'} alignSelf={'center'} bottom={100}>
@@ -36,6 +54,13 @@ const Onboarding = () => {
       <ImportantNotice
         isVisible={open === 'notice'}
         onClose={() => setOpen('')}
+        onComplete={onCompleteNotice}
+      />
+
+      <ReferralCode
+        isVisible={open === 'referral'}
+        onClose={() => setOpen('')}
+        onComplete={onCompleteReferral}
       />
     </Screen>
   );
