@@ -19,4 +19,8 @@ export const colors = {
   YELLOW_LIGHT: '#F4D957',
   ORANGE: '#E26F3F',
   PURPLE: '#9F40F5',
+  OFF_BLACK: '#232425',
+  OFF_BLACK_100: '#2E2F31',
+  SUBTEXT: '#6F6F6F',
+  PURPLE_TEXT: '#727AE4',
 };

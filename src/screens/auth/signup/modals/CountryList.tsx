@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { flagList } from 'data';
 import Modal from 'react-native-modal';
-import { deviceWidth, hp, isAndroid, wp } from 'utils';
+import { deviceWidth, hp, wp } from 'utils';
 import theme from 'theme';
 import { SelectedCountry } from '../components';
 import FuzzySearch from 'fuzzy-search';
@@ -83,7 +83,7 @@ export const CountryList = ({
           mx={24}
           px={12}
           flexDirection={'row'}
-          height={46}
+          height={hp(46)}
           borderRadius={16}
           backgroundColor={theme.colors.TXNBTN_BLACK}
           alignItems={'center'}>
@@ -147,8 +147,8 @@ const styles = StyleSheet.create({
   inputSearchBar: {
     marginLeft: wp(8),
     fontSize: hp(16),
+    width: 200,
     fontFamily: theme.font.ShigaSansMedium,
-    top: isAndroid ? 3 : 0,
     color: theme.colors.WHITE,
   },
 });

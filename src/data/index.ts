@@ -163,3 +163,35 @@ export const customizeProfile = [
     title: theme.colors.PURPLE,
   },
 ];
+
+export const dashboardOptions = [
+  {
+    id: 1,
+    title: 'Bank account',
+    description: 'Show account info',
+    icon: 'bank',
+    hasCurrency: true,
+  },
+  {
+    id: 2,
+    title: 'Pay bills',
+    description: 'Top-up & utilities',
+    icon: 'bills',
+    hasCurrency: false,
+  },
+];
+
+export const dashboardActions = [
+  {
+    id: 1,
+    icon: 'swap',
+    title: 'Convert money',
+    description: 'Swap between currencies',
+  },
+  {
+    id: 2,
+    icon: 'graduate',
+    title: 'Tuition payment',
+    description: 'Pay your tuition in seconds',
+  },
+];

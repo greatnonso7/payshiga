@@ -21,7 +21,7 @@ export const CountryPicker = () => {
       id: 1,
       title: 'Nigeria',
       code: '+234',
-      flag: 'https://hatscripts.github.io/circle-flags/flags/ng.svg',
+      flag: 'nigeria',
     });
   }, []);
 

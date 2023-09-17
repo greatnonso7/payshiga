@@ -23,16 +23,18 @@ export const HeaderText = ({
       <Text
         variant="h4"
         fontSize={26}
+        fontFamily={theme.font.ShigaDisplay}
         color={theme.colors.WHITE}
         lineHeight={hp(43)}>
         {hasHeaderText}
       </Text>
       {hasSubText && (
         <Text
-          width={width || wp(244)}
+          width={width || wp(300)}
           color={theme.colors.ACCENT_GREY_100}
           fontSize={16}
-          variant={textVariant || 'headerMedium'}>
+          variant={textVariant || 'headerMedium'}
+          fontFamily={theme.font.ShigaSansRegular}>
           {hasSubText}
         </Text>
       )}

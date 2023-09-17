@@ -6,7 +6,7 @@ import { AuthStackParamList } from 'types';
 import theme from 'theme';
 import { CountryPicker } from './components';
 import { StyleSheet } from 'react-native';
-import { hp, isAndroid } from 'utils';
+import { hp } from 'utils';
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
     fontSize: hp(20),
     fontFamily: theme.font.ShigaSansMedium,
     width: 200,
-    top: isAndroid ? 6 : 0,
     color: theme.colors.WHITE,
   },
 });

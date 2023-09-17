@@ -14,9 +14,14 @@ const DashboardNavigation = () => {
       initialRouteName="Dashboard"
       screenOptions={{
         headerShown: false,
+        gestureEnabled: false,
         ...TransitionPresets.SlideFromRightIOS,
       }}>
-      <DashboardStack.Screen name="Dashboard" component={BottomTabBar} />
+      <DashboardStack.Screen
+        name="Dashboard"
+        component={BottomTabBar}
+        options={{ gestureEnabled: false }}
+      />
     </DashboardStack.Navigator>
   );
 };

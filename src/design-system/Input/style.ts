@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   textInput: {
     fontFamily: theme.font.ShigaSansMedium,
     fontSize: hp(20),
-    height: 40,
+    height: hp(40),
     width: 300,
     borderWidth: 1,
     padding: 0,
