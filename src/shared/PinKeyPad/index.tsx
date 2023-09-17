@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import RNReactNativeHapticFeedback from 'react-native-haptic-feedback';
 import { Box, Text } from 'design-system';
 import { Icon } from 'shared';
-import { hp, wp } from 'utils';
 import { TouchableOpacity } from 'react-native';
+import theme from 'theme';
 
 interface PinKeyPadProps {
-  onComplete?: (value: string) => void;
-  isEscrow?: boolean;
+  onPress: (val: string) => void;
+  value: string;
 }
 
-export const PinKeyPad = ({ onComplete, isEscrow }: PinKeyPadProps) => {
-  const [pin, setPin] = useState('');
-
+export const PinKeyPad = ({ onPress, value }: PinKeyPadProps) => {
   const options = {
     enableVibrateFallback: true,
     ignoreAndroidSystemSettings: true,
@@ -21,71 +19,44 @@ export const PinKeyPad = ({ onComplete, isEscrow }: PinKeyPadProps) => {
   const firstRow = ['1', '2', '3'];
   const secondRow = ['4', '5', '6'];
   const thirdRow = ['7', '8', '9'];
-  const fourthRow = ['faceId', '0', 'del'];
+  const fourthRow = ['', '0', 'del'];
 
   const onLongPress = (item: any) => {
     RNReactNativeHapticFeedback.trigger('impactMedium', options);
 
     if (item === 'del') {
-      setPin('');
+      onPress?.('');
     }
   };
 
-  const onPressButton = async (item: string) => {
+  const onPressButton = async (val: string) => {
     RNReactNativeHapticFeedback.trigger('impactMedium', options);
-    let completePin;
-    if (item === 'del') {
-      setPin(pin?.slice(0, -1));
-      // setErrorPin();
-      return;
-    }
-    if (item === 'pin') {
-      return;
+    const lastChar = value?.charAt(value.length - 1);
+
+    const isDotValue = lastChar === '.' && val === '.';
+
+    if (val === 'del') {
+      return onPress?.(value?.slice(0, -1));
     }
 
-    if (isEscrow) {
-      if (pin.length < 7) {
-        setPin(pin + item);
-      }
+    const newValue = `${value}${val}`;
+    const splitValue = newValue.split('.');
+    const decimalLength = splitValue[1]?.length;
 
-      completePin = pin + item;
-      if (completePin.length === 6) {
-        onComplete && onComplete(completePin);
-      }
-    } else {
-      if (pin?.length < 5) {
-        setPin(pin + item);
-      }
-
-      completePin = pin + item;
-      if (completePin.length === 4) {
-        onComplete && onComplete(completePin);
-      }
+    if (
+      newValue.length < 12 &&
+      !isDotValue &&
+      (!decimalLength || decimalLength < 3)
+    ) {
+      onPress?.(newValue);
     }
   };
 
   return (
-    <Box mt={80}>
-      <Box
-        width={isEscrow ? wp(330) : wp(250)}
-        height={hp(50)}
-        flexDirection={'row'}
-        alignItems={'center'}
-        alignSelf={'center'}
-        justifyContent={'space-between'}>
-        {(isEscrow ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4]).map((item, index) => {
-          let hasCompleted = pin?.length >= index + 1;
-          return (
-            <Box key={index}>
-              <Icon name={hasCompleted ? 'active-pin' : 'empty-pin'} />
-            </Box>
-          );
-        })}
-      </Box>
+    <Box mt={50}>
       <Box
         flexDirection={'row'}
         mt={90}
-        mx={20}
         alignItems={'flex-start'}
         justifyContent={'space-between'}>
         <Box flex={1}>
@@ -106,7 +77,7 @@ export const PinKeyPad = ({ onComplete, isEscrow }: PinKeyPadProps) => {
                 flexDirection={'row'}
                 alignItems={'center'}
                 justifyContent={'center'}>
-                <Text fontSize={60} variant="h1">
+                <Text fontSize={60} variant="h2" color={theme.colors.WHITE}>
                   {item}
                 </Text>
               </Box>
@@ -129,7 +100,7 @@ export const PinKeyPad = ({ onComplete, isEscrow }: PinKeyPadProps) => {
                 flexDirection={'row'}
                 alignItems={'center'}
                 justifyContent={'center'}>
-                <Text fontSize={60} variant="h1">
+                <Text fontSize={60} variant="h2" color={theme.colors.WHITE}>
                   {item}
                 </Text>
               </Box>
@@ -152,7 +123,7 @@ export const PinKeyPad = ({ onComplete, isEscrow }: PinKeyPadProps) => {
                 flexDirection={'row'}
                 alignItems={'center'}
                 justifyContent={'center'}>
-                <Text fontSize={60} variant="h1">
+                <Text fontSize={60} variant="h2" color={theme.colors.WHITE}>
                   {item}
                 </Text>
               </Box>
@@ -178,9 +149,9 @@ export const PinKeyPad = ({ onComplete, isEscrow }: PinKeyPadProps) => {
                   alignItems={'center'}
                   justifyContent={'center'}>
                   {item === 'del' ? (
-                    <Icon name="arrow-left" />
+                    <Icon name="back-icon" />
                   ) : item === '0' ? (
-                    <Text fontSize={60} variant="h1">
+                    <Text fontSize={60} variant="h2" color={theme.colors.WHITE}>
                       {item}
                     </Text>
                   ) : null}

@@ -19,15 +19,20 @@ export const HeaderText = ({
   textVariant,
 }: HeaderTextProps) => {
   return (
-    <Box px={16}>
-      <Text variant="h1" color={theme.colors.PRIMARY} lineHeight={hp(43)}>
+    <Box px={40}>
+      <Text
+        variant="h4"
+        fontSize={26}
+        color={theme.colors.WHITE}
+        lineHeight={hp(43)}>
         {hasHeaderText}
       </Text>
       {hasSubText && (
         <Text
           width={width || wp(244)}
-          color={theme.colors.FAINT_ICON}
-          variant={textVariant || 'bodyMedium'}>
+          color={theme.colors.ACCENT_GREY_100}
+          fontSize={16}
+          variant={textVariant || 'headerMedium'}>
           {hasSubText}
         </Text>
       )}

@@ -1,6 +1,5 @@
-import { ActivityIndicator, StyleSheet, View, ViewStyle } from 'react-native';
+import { Image, StyleSheet, View, ViewStyle } from 'react-native';
 import React from 'react';
-import { deviceHeight, deviceWidth } from 'utils';
 import theme from 'theme';
 
 export function Loader(props: {
@@ -10,17 +9,26 @@ export function Loader(props: {
   const { loading, fullPageLoaderStyle } = props;
   return loading ? (
     <View style={[styles.fullPageLoader, fullPageLoaderStyle]}>
-      <ActivityIndicator size={'small'} color={theme.colors.PRIMARY} />
+      <Image
+        source={theme.images.loader}
+        resizeMode="contain"
+        style={styles.loaderImage}
+      />
     </View>
   ) : null;
 }
 const styles = StyleSheet.create({
   fullPageLoader: {
-    position: 'absolute',
-    height: deviceHeight,
-    width: deviceWidth,
+    height: 32,
+    width: 32,
+    marginTop: 20,
+    borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    backgroundColor: theme.colors.ALT_BLACK,
+  },
+  loaderImage: {
+    width: 100,
+    height: 100,
   },
 });

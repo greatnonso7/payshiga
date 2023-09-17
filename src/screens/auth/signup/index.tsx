@@ -1,10 +1,9 @@
-import React from 'react';
-import { Box, Text } from 'design-system';
-import { Header, Screen } from 'shared';
+import React, { useState } from 'react';
+import { Box, Button } from 'design-system';
+import { Header, HeaderText, PinKeyPad, Screen } from 'shared';
 import { StackScreenProps } from '@react-navigation/stack';
 import { AuthStackParamList } from 'types';
 import theme from 'theme';
-import { SvgUri } from 'react-native-svg';
 import { CountryPicker } from './components';
 import { StyleSheet, TextInput } from 'react-native';
 import { isAndroid } from 'utils';
@@ -12,32 +11,38 @@ import { isAndroid } from 'utils';
 type Props = StackScreenProps<AuthStackParamList, 'Signup'>;
 
 const Signup = ({ navigation: { navigate } }: Props) => {
+  const [phone, setPhone] = useState('');
   return (
     <Screen removeSafeaArea backgroundColor={theme.colors.BLACK}>
       <Header hasBackButton />
-
+      <HeaderText
+        hasHeaderText="Test Assessment"
+        hasSubText="We will send you a verification code confirm this is your number"
+      />
       <Box mx={40} mt={12}>
-        <Text color={theme.colors.WHITE} variant="h4" fontSize={26}>
-          Test Assessment
-        </Text>
-        <Text
-          color={theme.colors.ACCENT_GREY_100}
-          variant="header"
-          pt={10}
-          width={295}>
-          We will send you a verification code confirm this is your number
-        </Text>
-
         <Box mt={30} flexDirection={'row'} alignItems={'center'}>
           <CountryPicker />
           <TextInput
             editable={false}
             placeholder="812 345 6789"
+            value={phone}
+            maxLength={11}
             style={styles.phoneInputStyle}
             placeholderTextColor={theme.colors.PLACEHOLDER_BLACK}
           />
         </Box>
+
+        <PinKeyPad
+          value={phone}
+          onPress={(val: string) => (val.length <= 11 ? setPhone(val) : null)}
+        />
       </Box>
+      <Button
+        backgroundColor={theme.colors.PRIMARY_BLUE_100}
+        disabled={phone.length >= 10 ? false : true}
+        title="Continue"
+        onPress={() => navigate('VerifyOtp')}
+      />
     </Screen>
   );
 };
@@ -49,6 +54,7 @@ const styles = StyleSheet.create({
     fontFamily: theme.font.SFProRoundedMedium,
     width: 200,
     top: isAndroid ? 6 : 0,
+    color: theme.colors.WHITE,
   },
 });
 

@@ -8,6 +8,7 @@ export type RootStackParamList = {
 export type AuthStackParamList = {
   Onboarding: undefined;
   Signup: undefined;
+  VerifyOtp: undefined;
 };
 
 export type DashboardStackParamList = {

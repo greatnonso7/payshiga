@@ -8,4 +8,6 @@ export const colors = {
   APP_BLACK: '#181819',
   BLACK: '#000000',
   TXNBTN_BLACK: '#1F2021',
+  TXNBG_BLACK: '#131415',
+  ALT_BLACK: '#171819',
 };

@@ -5,7 +5,7 @@ import { Icon } from 'shared';
 import { TouchableOpacity } from 'react-native';
 import { CountryList } from '../modals';
 
-interface SelectedCountry {
+export interface SelectedCountry {
   id: number;
   title: string;
   code: string;
@@ -24,6 +24,11 @@ export const CountryPicker = () => {
       flag: 'https://hatscripts.github.io/circle-flags/flags/ng.svg',
     });
   }, []);
+
+  const onSelectFlag = async (flag: SelectedCountry) => {
+    setSelectedCountry(flag);
+    setShow('');
+  };
   return (
     <Box>
       <Box
@@ -40,7 +45,11 @@ export const CountryPicker = () => {
         </Box>
       </Box>
 
-      <CountryList isVisible={show === 'country'} onClose={() => setShow('')} />
+      <CountryList
+        isVisible={show === 'country'}
+        onClose={() => setShow('')}
+        onComplete={onSelectFlag}
+      />
     </Box>
   );
 };

@@ -5,10 +5,10 @@ import {
   TouchableOpacity,
   ViewStyle,
 } from 'react-native';
-import {Box, BoxProps, Text} from 'design-system';
+import { Box, BoxProps, Text } from 'design-system';
 import theme from 'theme';
-import {getBottomSpace, hp, wp} from 'utils';
-import {Icon} from 'shared';
+import { getBottomSpace, hp, wp } from 'utils';
+import { Icon } from 'shared';
 
 interface Props extends BoxProps {
   title?: string;
@@ -46,10 +46,10 @@ export const Button = ({
         flexDirection="row"
         alignItems="center"
         justifyContent="center"
-        borderRadius={hp(7)}
+        borderRadius={hp(100)}
         height={hp(46)}
-        width={wp(344)}
-        backgroundColor={backgroundColor || theme.colors.PRIMARY}
+        width={wp(311)}
+        backgroundColor={backgroundColor || theme.colors.PRIMARY_BLUE_100}
         {...props}>
         <Box
           flexDirection={'row'}
