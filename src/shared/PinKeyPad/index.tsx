@@ -56,7 +56,7 @@ export const PinKeyPad = ({ onPress, value }: PinKeyPadProps) => {
     <Box mt={50}>
       <Box
         flexDirection={'row'}
-        mt={90}
+        mt={60}
         alignItems={'flex-start'}
         justifyContent={'space-between'}>
         <Box flex={1}>

@@ -47,7 +47,7 @@ export const Button = ({
         alignItems="center"
         justifyContent="center"
         borderRadius={hp(100)}
-        height={hp(46)}
+        height={hp(50)}
         width={wp(311)}
         backgroundColor={backgroundColor || theme.colors.PRIMARY_BLUE_100}
         {...props}>

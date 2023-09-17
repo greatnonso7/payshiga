@@ -1,3 +1,5 @@
+import theme from 'theme';
+
 export const flagList = [
   {
     id: 1,
@@ -124,5 +126,40 @@ export const flagList = [
     title: 'Malta',
     code: '+356',
     flag: 'malta',
+  },
+];
+
+export const customizeProfile = [
+  {
+    id: 1,
+    title: theme.colors.BLUE,
+  },
+  {
+    id: 2,
+    title: theme.colors.GREEN,
+  },
+  {
+    id: 3,
+    title: theme.colors.RED,
+  },
+  {
+    id: 4,
+    title: theme.colors.SKYBLUE,
+  },
+  {
+    id: 5,
+    title: theme.colors.PINK,
+  },
+  {
+    id: 6,
+    title: theme.colors.YELLOW_LIGHT,
+  },
+  {
+    id: 7,
+    title: theme.colors.ORANGE,
+  },
+  {
+    id: 8,
+    title: theme.colors.PURPLE,
   },
 ];

@@ -1,17 +1,36 @@
 import React, { useState } from 'react';
-import { Box, Button } from 'design-system';
+import { Box, Button, RegularInput } from 'design-system';
 import { Header, HeaderText, PinKeyPad, Screen } from 'shared';
 import { StackScreenProps } from '@react-navigation/stack';
 import { AuthStackParamList } from 'types';
 import theme from 'theme';
 import { CountryPicker } from './components';
-import { StyleSheet, TextInput } from 'react-native';
-import { isAndroid } from 'utils';
+import { StyleSheet } from 'react-native';
+import { hp, isAndroid } from 'utils';
+import * as yup from 'yup';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+
+interface FormData {
+  phone: string;
+}
+
+const schema = yup.object().shape({
+  phone: yup.string().required().max(11),
+});
 
 type Props = StackScreenProps<AuthStackParamList, 'Signup'>;
 
 const Signup = ({ navigation: { navigate } }: Props) => {
   const [phone, setPhone] = useState('');
+
+  const { control } = useForm<FormData>({
+    resolver: yupResolver(schema),
+    defaultValues: {
+      phone: '',
+    },
+    mode: 'all',
+  });
   return (
     <Screen removeSafeaArea backgroundColor={theme.colors.BLACK}>
       <Header hasBackButton />
@@ -20,9 +39,10 @@ const Signup = ({ navigation: { navigate } }: Props) => {
         hasSubText="We will send you a verification code confirm this is your number"
       />
       <Box mx={40} mt={12}>
-        <Box mt={30} flexDirection={'row'} alignItems={'center'}>
+        <Box mt={10} flexDirection={'row'} alignItems={'center'}>
           <CountryPicker />
-          <TextInput
+          <RegularInput
+            control={control}
             editable={false}
             placeholder="812 345 6789"
             value={phone}
@@ -50,7 +70,7 @@ const Signup = ({ navigation: { navigate } }: Props) => {
 const styles = StyleSheet.create({
   phoneInputStyle: {
     marginLeft: 10,
-    fontSize: 20,
+    fontSize: hp(20),
     fontFamily: theme.font.SFProRoundedMedium,
     width: 200,
     top: isAndroid ? 6 : 0,

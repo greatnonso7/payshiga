@@ -9,6 +9,9 @@ export type AuthStackParamList = {
   Onboarding: undefined;
   Signup: undefined;
   VerifyOtp: undefined;
+  SelectCountry: undefined;
+  ChooseUsername: undefined;
+  SetDisplay: { username: string };
 };
 
 export type DashboardStackParamList = {

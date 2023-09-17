@@ -4,7 +4,7 @@ import { hp } from 'utils';
 
 const styles = StyleSheet.create({
   baseContainer: {
-    height: hp(46),
+    height: hp(50),
     backgroundColor: theme.colors.BLACK,
     borderWidth: 1,
     flexDirection: 'row',
@@ -13,9 +13,11 @@ const styles = StyleSheet.create({
   },
   textInput: {
     fontFamily: theme.font.SFProRoundedMedium,
-    fontSize: 20,
-    flex: 1,
-    paddingLeft: 10,
+    fontSize: hp(20),
+    height: 40,
+    width: 300,
+    borderWidth: 1,
+    padding: 0,
     color: theme.colors.WHITE,
   },
 });
