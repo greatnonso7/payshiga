@@ -23,4 +23,5 @@ export const colors = {
   OFF_BLACK_100: '#2E2F31',
   SUBTEXT: '#6F6F6F',
   PURPLE_TEXT: '#727AE4',
+  PINK_100: '#FFC8DD',
 };

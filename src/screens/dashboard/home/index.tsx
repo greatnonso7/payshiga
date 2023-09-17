@@ -26,9 +26,11 @@ const Home = () => {
               height={32}
               justifyContent={'center'}
               alignItems={'center'}
-              backgroundColor={theme.colors.PINK}
+              backgroundColor={theme.colors.PINK_100}
               borderRadius={100}>
-              <Text color={theme.colors.APP_BLACK}>C</Text>
+              <Text color={theme.colors.APP_BLACK} variant="bodyBold">
+                CC
+              </Text>
             </Box>
             <Text pl={10} variant="h1" color={theme.colors.WHITE} fontSize={24}>
               Home

@@ -16,7 +16,7 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <ThemeProvider theme={theme}>
-        <StatusBar />
+        <StatusBar barStyle="light-content" />
         <Navigation />
       </ThemeProvider>
     </SafeAreaProvider>
