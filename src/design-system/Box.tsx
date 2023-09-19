@@ -1,4 +1,8 @@
-import {ScrollViewProps, TouchableOpacityProps, ViewProps} from 'react-native';
+import {
+  ScrollViewProps,
+  TouchableOpacityProps,
+  ViewProps,
+} from 'react-native';
 import styled from '@emotion/native';
 import {
   border,
@@ -39,6 +43,6 @@ const Box = styled.View<BoxProps>(BoxOptions);
 
 Box.displayName = 'Box';
 
-export {Box};
+export { Box };
 
 export default Box;

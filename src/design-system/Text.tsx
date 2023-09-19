@@ -1,4 +1,4 @@
-import {TextProps as RNTextProps} from 'react-native';
+import { TextProps as RNTextProps } from 'react-native';
 import styled from '@emotion/native';
 import {
   color,
@@ -18,7 +18,7 @@ import {
   TypographyProps,
   variant as styledVariant,
 } from 'styled-system';
-import theme, {Theme} from 'theme';
+import theme, { Theme } from 'theme';
 
 export interface TextProps
   extends ColorProps,
@@ -52,11 +52,11 @@ const TextOptions = compose(
 const Text = styled.Text<TextProps>(TextOptions);
 
 Text.defaultProps = {
-  color: theme.colors.PRIMARY,
+  color: theme.colors.PRIMARY_BLUE_100,
   variant: 'body',
 };
 
 Text.displayName = 'Text';
 
-export {Text};
+export { Text };
 export default Text;
